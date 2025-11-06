@@ -1,12 +1,17 @@
-# VulnX Security - Static Site
+# VulnX Security Website (Next.js + Tailwind)
 
-Welcome to the official static website for **VulnX Security**, a boutique offensive security firm based in Tulsa, OK.  
-This site is built using HTML/CSS with Bootstrap 5 and deployed via **GitHub Pages** using the `/docs` folder method.
+Modern, fast, and secure marketing site for VulnX Security, LLC.
 
----
+## Tech Stack
+- Next.js 14 (pages router)
+- Tailwind CSS
+- Markdown-powered blog (remark)
+- Formspree for contact form
+- Vercel for hosting/CDN/SSL
 
-## 🚀 Deployment (GitHub Pages)
+## Local Development
+```bash
+npm install
+npm run dev
+# open http://localhost:3000
 
-1. Clone this repo or upload contents to your GitHub repo (suggested: `vulnxsecurity-site`)
-2. Make sure all website files are inside the `/docs` folder
-3. Go to:
