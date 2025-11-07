@@ -13,10 +13,7 @@ export default function Hero() {
         </p>
         <div className="mt-8 flex gap-4">
           <Link href="/contact" className="px-5 py-3 rounded bg-accent text-white hover:opacity-90">
-            Get in touch!
-          </Link>
-          <Link href="/services" className="px-5 py-3 rounded border border-neutral-700 hover:border-neutral-500">
-            View Services
+            Get in touch
           </Link>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/contact" className="px-3 py-1.5 rounded bg-accent text-white hover:opacity-90">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
 
         {/* Mobile menu button */}
