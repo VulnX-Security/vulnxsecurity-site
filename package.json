@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "14.2.5",
+    "next": "15.2.3",
+    "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^15.0.1",
@@ -21,7 +22,7 @@
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10"
   },
-  "description": "Modern, fast, and secure marketing site for VulnX Security, LLC.",
+  "description": "Modern, fast, and secure site for VulnX Security, LLC.",
   "main": "next.config.js",
   "directories": {
     "lib": "lib"
