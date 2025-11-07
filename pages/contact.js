@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <Layout>
       <section className="mx-auto max-w-3xl px-4 py-16">
-        <h1 className="text-3xl font-semibold">Request a Security Assessment</h1>
+        <h1 className="text-3xl font-semibold">Request more information</h1>
         <p className="mt-3 text-neutral-300">
           Fill out the form and we’ll follow up to schedule a discovery call.
         </p>
