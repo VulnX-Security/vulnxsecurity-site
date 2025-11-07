@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         base: "#0A0A0A",
         text: "#E5E5E5",
-        accent: "#E50914"
+        accent: "#ad0000"
       }
     },
     fontFamily: {
