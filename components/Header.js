@@ -5,8 +5,7 @@ export default function Header() {
     <header className="border-b border-neutral-800">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="VulnX Logo" className="h-8 w-8" />
-          <span className="font-semibold tracking-wide">VulnX Security</span>
+          <span className="font-semibold tracking-wide text-4xl">Vuln<span className="text-accent text-4xl">X</span></span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/about">About</Link>
