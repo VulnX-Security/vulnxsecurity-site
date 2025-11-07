@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-black to-black">
       <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
         <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
-          The best defense is a good offense.
+          The best defense is a good offense
         </h1>
         <p className="mt-4 max-w-2xl text-neutral-300">
           VulnX Security delivers enterprise-grade penetration testing, red-team operations, and cloud security assessments.

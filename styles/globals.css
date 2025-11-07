@@ -1,12 +1,29 @@
+/* Import Google Fonts (Roboto + Aboreto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Aboreto&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  background: #0A0A0A;
-  color: #E5E5E5;
+/* Base typography */
+:root {
+  color-scheme: dark;
 }
 
-a { color: #E5E5E5; }
-a:hover { color: #fff; }
+html, body {
+  height: 100%;
+  background-color: #0A0A0A;
+  color: #E5E5E5;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Headings use Aboreto (display font) */
+h1, h2, h3, h4, h5, h6, .display-font, .brand {
+  font-family: "Aboreto", serif;
+}
+
+/* Paragraphs explicitly Roboto */
+p, .prose, .text-body {
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 
