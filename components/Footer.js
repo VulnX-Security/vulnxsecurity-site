@@ -6,8 +6,8 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} VulnX Security, LLC. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="mailto:info@vulnxsecurity.com">info@vulnxsecurity.com</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/company/vulnx-security?trk=public_profile_topcard-current-company" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/VulnX-Security" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </div>
