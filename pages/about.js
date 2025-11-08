@@ -6,9 +6,9 @@ export default function About() {
   return (
     <Layout>
       <section className="mx-auto max-w-4xl px-4 py-16">
-        <h1 className="text-3xl font-semibold">About <Brand /> Security</h1>
+        <h1 className="text-3xl font-semibold">About <Brand /></h1>
         <p className="mt-4 text-neutral-300">
-          At VulnX Security, our mission is to strengthen organizations by proactively identifying,
+          At VulnX Security, LLC, our mission is to strengthen organizations by proactively identifying,
           exploiting, and mitigating weaknesses before adversaries do. We deliver actionable, executive-ready
           insight across networks, web, cloud, and identity.
         </p>
@@ -16,7 +16,8 @@ export default function About() {
         <h2 className="mt-10 text-4xl font-semibold text-accent">Meet the team</h2>
 
         <div className="mt-6 flex flex-col md:flex-row md:items-center gap-6">
-          <div className="flex-shrink-0">
+          {/* Center headshot on mobile with mx-auto, keep left alignment on md+ */}
+          <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
               src="/headshot-1.jpg"
               alt="Ryan McCutcheon — Founder & Principal Security Consultant"
@@ -28,12 +29,13 @@ export default function About() {
             />
           </div>
 
-          <div className="text-neutral-300">
+          {/* Text centered on mobile, left-aligned on md+ */}
+          <div className="text-neutral-300 text-center md:text-left">
             <p>
               <strong>Ryan McCutcheon — Founder & Principal Security Consultant</strong>
             </p>
             <p className="mt-2">
-              Offensive security subject-matter expert with enterprise experience in Active Directory, Microsoft 365,
+              Offensive security expert with enterprise experience in Active Directory, Microsoft 365,
               and red-team operations.
             </p>
 
@@ -53,7 +55,7 @@ export default function About() {
           </div>
         </div>
 
-        <h2 className="mt-10 text-4xl font-semibold text-accent">Core values</h2>
+        <h2 className="mt-10 text-xl font-semibold text-accent">Core values</h2>
         <ul className="mt-4 list-disc list-inside text-neutral-300 space-y-3">
           <li>
             <strong>Integrity Above All —</strong> We hold ourselves to the highest ethical standards in every engagement,

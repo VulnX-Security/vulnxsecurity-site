@@ -41,9 +41,13 @@ export default function Header() {
   };
 
   return (
-    <header className="border-b border-neutral-800">
+    <header className="relative border-b border-neutral-800">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        {/* Brand: center on small screens, normal static flow on md+ */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none"
+        >
           <Brand className="font-semibold tracking-wide text-2xl md:text-4xl" />
         </Link>
 
@@ -70,8 +74,9 @@ export default function Header() {
 
             {/* Dropdown positioned directly under the button. pointer-events toggled so it can be hovered. */}
             <div
-              className={`absolute left-0 top-full mt-1 w-80 bg-neutral-900/95 rounded shadow-lg p-3 z-50 transition-opacity duration-150 ${desktopServicesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                }`}
+              className={`absolute left-0 top-full mt-1 w-80 bg-neutral-900/95 rounded shadow-lg p-3 z-50 transition-opacity duration-150 ${
+                desktopServicesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+              }`}
               onMouseEnter={openDesktopMenu}
               onMouseLeave={closeDesktopMenuWithDelay}
             >
@@ -81,9 +86,7 @@ export default function Header() {
                     <Link
                       href={s.href}
                       className="block px-3 py-2 rounded hover:bg-neutral-800/60"
-                      onClick={() => {
-                        setDesktopServicesOpen(false);
-                      }}
+                      onClick={() => setDesktopServicesOpen(false)}
                     >
                       <span className="text-sm">{s.title}</span>
                     </Link>
@@ -97,7 +100,7 @@ export default function Header() {
           <Link href="/contact">Contact</Link>
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button (keeps original position on right) */}
         <button
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -114,43 +117,57 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile dropdown — absolute overlay so it doesn't push page content down; semi-transparent background */}
       {open && (
-        <div className="md:hidden px-4 pb-4">
-          <div className="mx-auto max-w-6xl bg-neutral-900/50 rounded p-4 flex flex-col gap-3">
-            <Link href="/about" onClick={() => { setOpen(false); setMobileServicesOpen(false); }} className="block">About</Link>
-
-            {/* Mobile Services expandable */}
-            <div>
-              <button
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-neutral-800/40"
-                aria-expanded={mobileServicesOpen}
+        <div className="md:hidden absolute inset-x-0 top-full z-40">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="bg-neutral-900/70 backdrop-blur-sm rounded mt-2 p-3 shadow-lg flex flex-col gap-1">
+              {/* Uniform item padding so text lines up */}
+              <Link
+                href="/about"
+                className="block w-full px-3 py-2 rounded hover:bg-neutral-800/40"
+                onClick={() => { setOpen(false); setMobileServicesOpen(false); }}
               >
-                <span>Services</span>
-                <svg className={`w-4 h-4 transform transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+                About
+              </Link>
 
-              {mobileServicesOpen && (
-                <div className="mt-2 flex flex-col gap-1 pl-3">
-                  {services.map((s) => (
-                    <Link
-                      key={s.href}
-                      href={s.href}
-                      onClick={() => { setOpen(false); setMobileServicesOpen(false); }}
-                      className="block px-3 py-2 rounded hover:bg-neutral-800/40"
-                    >
-                      {s.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {/* Services expandable — same padding, arrow on right */}
+              <div className="w-full">
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  aria-expanded={mobileServicesOpen}
+                  className="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-neutral-800/40"
+                >
+                  <span>Services</span>
+                  <svg className={`w-4 h-4 transform transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {mobileServicesOpen && (
+                  <div className="mt-2 flex flex-col gap-1 pl-4">
+                    {services.map((s) => (
+                      <Link
+                        key={s.href}
+                        href={s.href}
+                        onClick={() => { setOpen(false); setMobileServicesOpen(false); }}
+                        className="block px-3 py-2 rounded hover:bg-neutral-800/40"
+                      >
+                        {s.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link href="/blog" onClick={() => setOpen(false)} className="block w-full px-3 py-2 rounded hover:bg-neutral-800/40">
+                Blog
+              </Link>
+
+              <Link href="/contact" onClick={() => setOpen(false)} className="block w-full px-3 py-2 rounded bg-accent text-white text-center hover:opacity-90">
+                Contact
+              </Link>
             </div>
-
-            <Link href="/blog" onClick={() => setOpen(false)} className="block">Blog</Link>
-            <Link href="/contact" onClick={() => setOpen(false)} className="block px-3 py-1.5 rounded bg-accent text-white text-center">Contact</Link>
           </div>
         </div>
       )}
