@@ -1,3 +1,4 @@
+import Brand from "../../components/Brand";
 import Layout from "../../components/Layout";
 import Link from "next/link";
 
@@ -46,7 +47,7 @@ export default function ServicesIndex() {
             <section className="mx-auto max-w-6xl px-4 py-16">
                 <h1 className="text-3xl font-semibold">Our Services</h1>
                 <p className="mt-4 text-neutral-300 max-w-3xl">
-                    Explore detailed descriptions of the offensive and defensive services VulnX provides.
+                    Explore detailed descriptions of the services VulnX Security provides.
                 </p>
 
                 <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function RedTeam() {
   return (
@@ -22,6 +23,7 @@ export default function RedTeam() {
           <Link href="/services" className="text-accent">← Back to services</Link>
         </div>
       </section>
+      <ContactForm service="Red Team & Adversary Simulation" className="pt-0" />
     </Layout>
   );
 }

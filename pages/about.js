@@ -15,43 +15,108 @@ export default function About() {
 
         <h2 className="mt-10 text-4xl font-semibold text-accent">Meet the team</h2>
 
+        {/* Team Member: Ryan */}
         <div className="mt-6 flex flex-col md:flex-row md:items-center gap-6">
-          {/* Center headshot on mobile with mx-auto, keep left alignment on md+ */}
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
               src="/headshot-1.jpg"
               alt="Ryan McCutcheon — Founder & Principal Security Consultant"
-              width={160}
-              height={160}
-              className="rounded-lg object-cover"
+              width={170}
+              height={170}
+              className="rounded-lg object-cover shadow-lg shadow-black/40"
               priority
               unoptimized
             />
           </div>
-
-          {/* Text centered on mobile, left-aligned on md+ */}
           <div className="text-neutral-300 text-center md:text-left">
-            <p>
-              <strong>Ryan McCutcheon — Founder & Principal Security Consultant</strong>
+            <p className="text-lg font-semibold">Ryan McCutcheon — Founder & Principal Security Consultant</p>
+            <p className="mt-2 leading-relaxed text-sm">
+              Cybersecurity professional, with a Masters degree in Computer and Information Science, specializing in offensive security, adversary emulation, and enterprise defense
+              improvement. Ryan brings a dual-perspective approach to testing and hardening—combining real-world
+              exploitation expertise with defensive engineering insight.
             </p>
-            <p className="mt-2">
-              Offensive security expert with enterprise experience in Active Directory, Microsoft 365,
-              and red-team operations.
+            <p className="mt-2 leading-relaxed text-sm">
+              His experience spans Active Directory, Microsoft 365, web application security, and infrastructure
+              assessments, with a focus on transforming vulnerabilities into measurable resilience. He leads engagements
+              involving penetration testing, red-team operations, and threat simulations aligned with frameworks such as
+              MITRE ATT&CK, NIST, and PTES—delivering executive and technical reporting that drives action.
             </p>
-
             <h3 className="mt-4 font-medium">Certifications</h3>
-            <ul className="mt-2 list-disc list-inside space-y-2">
+            <ul className="mt-2 list-disc list-inside space-y-2 text-sm leading-relaxed">
               <li>
-                <strong className="text-accent">OffSec OSCP+ (Offensive Security Certified Professional)</strong>: Hands-on, practical penetration testing
-                certification requiring candidates to identify, exploit, and document vulnerabilities in a time‑boxed lab
-                environment. Demonstrates strong offensive security, and reporting skills.
+                <strong className="text-accent">OffSec OSCP+ (Offensive Security Certified Professional)</strong> – Demonstrates advanced proficiency in
+                real-world penetration testing, exploitation, lateral movement, and post-exploitation reporting.
               </li>
               <li>
-                <strong className="text-accent">CompTIA Security+</strong>: Vendor-neutral certification covering foundational knowledge in network
-                security, threat management, access control, and compliance. Validates competency in implementing and
-                monitoring basic security practices in enterprise environments.
+                <strong className="text-accent">CompTIA Security+</strong> – Establishes foundational expertise in network defense, access control, and
+                enterprise security best practices.
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Team Member: Devin Ogle */}
+        <div className="mt-10 flex flex-col md:flex-row md:items-center gap-6">
+          <div className="flex-shrink-0 mx-auto md:mx-0">
+            <Image
+              src="/headshot-3.png"
+              alt="Devin Ogle — Principal Security Consultant"
+              width={170}
+              height={170}
+              className="rounded-lg object-cover shadow-lg shadow-black/40"
+              unoptimized
+            />
+          </div>
+          <div className="text-neutral-300 text-center md:text-left">
+            <p className="text-lg font-semibold">Devin Ogle — Principal Security Consultant</p>
+            <p className="mt-2 leading-relaxed text-sm">
+              Brings hands-on experience from both public-sector and private-industry environments, delivering practical,
+              actionable security insight across varied threat landscapes. Devin’s work focuses on vulnerability assessment,
+              penetration testing, and aligning security controls with regulatory and business objectives.
+            </p>
+            <h3 className="mt-4 font-medium">Certifications</h3>
+            <ul className="mt-2 list-disc list-inside space-y-1 text-sm leading-relaxed">
+              <li><strong className="text-accent">CompTIA Security+</strong></li>
+              <li><strong className="text-accent">CompTIA Network+</strong></li>
+              <li><strong className="text-accent">Certified Ethical Hacker (CEH)</strong></li>
+              <li><strong className="text-accent">TCM Security Practical Network Penetration Tester (PJNT)</strong></li>
+            </ul>
+            <h4 className="mt-4 font-medium">Experience highlights</h4>
+            <ul className="mt-2 list-disc list-inside space-y-2 text-sm leading-relaxed">
+              <li>
+                Worked within government agencies to safeguard sensitive data and maintain compliance with national
+                security frameworks.
+              </li>
+              <li>
+                Served commercial organizations by conducting penetration tests, vulnerability assessments, and
+                designing scalable defensive architectures.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Team Member: Brayden Edwards */}
+        <div className="mt-10 flex flex-col md:flex-row md:items-center gap-6">
+          <div className="flex-shrink-0 mx-auto md:mx-0">
+            <Image
+              src="/headshot-2.jpg"
+              alt="Brayden Edwards — Security Consultant"
+              width={170}
+              height={170}
+              className="rounded-lg object-cover shadow-lg shadow-black/40"
+              unoptimized
+            />
+          </div>
+          <div className="text-neutral-300 text-center md:text-left">
+            <p className="text-lg font-semibold">Brayden Edwards — Security Consultant</p>
+            <p className="mt-2 leading-relaxed text-sm">
+              Focused on vulnerability enumeration, exploit validation, and reporting clarity. Supports assessment
+              workflows across infrastructure, web, and identity layers.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed">
+              Passionate about defensive hardening informed by offensive techniques—bridging the gap between
+              discovery and measurable risk reduction.
+            </p>
           </div>
         </div>
 
@@ -89,7 +154,7 @@ export default function About() {
           </li>
         </ul>
       </section>
-    </Layout>
+    </Layout >
   );
 }
 

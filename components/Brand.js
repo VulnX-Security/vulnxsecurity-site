@@ -4,7 +4,7 @@ export default function Brand({ className = "" }) {
     <span className={cls} aria-label="VulnX">
       {'Vuln'}
       <span className="brand-x" aria-hidden>
-        <span className="brand-x-text">X</span>
+        <span className="text-accent">X</span>
 
         {/* SVG overlay: thin brush strokes + subtle glint */}
         <svg
