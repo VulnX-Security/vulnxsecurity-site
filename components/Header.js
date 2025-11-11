@@ -74,9 +74,8 @@ export default function Header() {
 
             {/* Dropdown positioned directly under the button. pointer-events toggled so it can be hovered. */}
             <div
-              className={`absolute left-0 top-full mt-1 w-80 bg-neutral-900/95 rounded shadow-lg p-3 z-50 transition-opacity duration-150 ${
-                desktopServicesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-              }`}
+              className={`absolute left-0 top-full mt-1 w-80 bg-neutral-900/95 rounded shadow-lg p-3 z-50 transition-opacity duration-150 ${desktopServicesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                }`}
               onMouseEnter={openDesktopMenu}
               onMouseLeave={closeDesktopMenuWithDelay}
             >

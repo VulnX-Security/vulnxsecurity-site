@@ -1,19 +1,20 @@
 import Layout from "../components/Layout";
 import Brand from "../components/Brand";
+import ContactForm from "../components/ContactForm";
 import Image from "next/image";
 
 export default function About() {
   return (
     <Layout>
       <section className="mx-auto max-w-4xl px-4 py-16">
-        <h1 className="text-3xl font-semibold">About <Brand /></h1>
+        <h1 className="text-4xl font-semibold">About <Brand /></h1>
         <p className="mt-4 text-neutral-300">
           At VulnX Security, LLC, our mission is to strengthen organizations by proactively identifying,
           exploiting, and mitigating weaknesses before adversaries do. We deliver actionable, executive-ready
           insight across networks, web, cloud, and identity.
         </p>
 
-        <h2 className="mt-10 text-4xl font-semibold text-accent">Meet the team</h2>
+        <h2 className="mt-10 text-3xl font-semibold">Meet the team</h2>
 
         {/* Team Member: Ryan */}
         <div className="mt-6 flex flex-col md:flex-row md:items-center gap-6">
@@ -29,7 +30,7 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Ryan McCutcheon — Founder & Principal Security Consultant</p>
+            <p className="text-lg font-semibold">Ryan McCutcheon — <span className="text-accent">Founder & Principal Security Consultant</span></p>
             <p className="mt-2 leading-relaxed text-sm">
               Cybersecurity professional, with a Masters degree in Computer and Information Science, specializing in offensive security, adversary emulation, and enterprise defense
               improvement. Ryan brings a dual-perspective approach to testing and hardening—combining real-world
@@ -68,7 +69,7 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Devin Ogle — Principal Security Consultant</p>
+            <p className="text-lg font-semibold">Devin Ogle — <span className="text-accent">Principal Security Consultant</span></p>
             <p className="mt-2 leading-relaxed text-sm">
               Brings hands-on experience from both public-sector and private-industry environments, delivering practical,
               actionable security insight across varied threat landscapes. Devin’s work focuses on vulnerability assessment,
@@ -108,52 +109,65 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Brayden Edwards — Security Consultant</p>
+            <p className="text-lg font-semibold">Brayden Edwards — <span className="text-accent">Security Consultant</span></p>
             <p className="mt-2 leading-relaxed text-sm">
-              Focused on vulnerability enumeration, exploit validation, and reporting clarity. Supports assessment
-              workflows across infrastructure, web, and identity layers.
+              Defensive security professional specializing in threat detection, incident response, and enterprise defense
+              operations. Brayden focuses on identifying, analyzing, and mitigating real-world attacks through proactive
+              monitoring, log analysis, and vulnerability management.
             </p>
             <p className="mt-2 text-sm leading-relaxed">
-              Passionate about defensive hardening informed by offensive techniques—bridging the gap between
-              discovery and measurable risk reduction.
+              He brings experience supporting security operations across Microsoft 365, Active Directory, and endpoint
+              environments—translating complex detections into actionable insights. His work emphasizes strengthening
+              detection engineering, refining response playbooks, and aligning defensive controls with frameworks such as
+              MITRE ATT&CK and NIST CSF.
             </p>
+            <h3 className="mt-4 font-medium">Certifications</h3>
+            <ul className="mt-2 list-disc list-inside space-y-2 text-sm leading-relaxed">
+              <li>
+                <strong className="text-accent">CompTIA Security+</strong> – Validates core expertise in defensive security, threat management, and
+                enterprise risk mitigation.
+              </li>
+            </ul>
           </div>
         </div>
 
-        <h2 className="mt-10 text-xl font-semibold text-accent">Core values</h2>
-        <ul className="mt-4 list-disc list-inside text-neutral-300 space-y-3">
+        <h2 className="mt-10 text-3xl font-semibold">Core values</h2>
+        <ul className="mt-4 list-none list-inside text-neutral-300 space-y-3">
           <li>
-            <strong>Integrity Above All —</strong> We hold ourselves to the highest ethical standards in every engagement,
+            <strong className="text-accent">Integrity Above All</strong> — We hold ourselves to the highest ethical standards in every engagement,
             ensuring honesty, transparency, and trust with our clients.
           </li>
           <li>
-            <strong>Excellence in Execution —</strong> Every assessment, every report, every recommendation is crafted with
+            <strong className="text-accent">Excellence in Execution</strong> — Every assessment, every report, every recommendation is crafted with
             precision, accuracy, and pride in our technical expertise.
           </li>
           <li>
-            <strong>Adversarial Mindset, Defensive Purpose —</strong> We think like attackers to strengthen your defenses.
+            <strong className="text-accent">Adversarial Mindset, Defensive Purpose</strong> — We think like attackers to strengthen your defenses.
             Our offensive insights drive real-world resilience.
           </li>
           <li>
-            <strong>Continuous Learning —</strong> We stay ahead of evolving threats through constant research, red-team
+            <strong className="text-accent">Continuous Learning</strong> — We stay ahead of evolving threats through constant research, red-team
             simulations, and professional development.
           </li>
           <li>
-            <strong>Client Partnership —</strong> We see security as a collaboration. We align our methods and findings with
+            <strong className="text-accent">Client Partnership</strong> — We see security as a collaboration. We align our methods and findings with
             your goals, empowering your team through knowledge transfer.
           </li>
           <li>
-            <strong>Confidentiality and Trust —</strong> We treat your data and systems with the same protection we apply to our own.
+            <strong className="text-accent">Confidentiality and Trust</strong> — We treat your data and systems with the same protection we apply to our own.
           </li>
           <li>
-            <strong>Innovation and Adaptability —</strong> We embrace new tools, techniques, and threat intelligence to stay
+            <strong className="text-accent">Innovation and Adaptability</strong> — We embrace new tools, techniques, and threat intelligence to stay
             one step ahead of adversaries.
           </li>
           <li>
-            <strong>Accountability and Ownership —</strong> We stand by our work, our words, and our results — always delivering what we promise.
+            <strong className="text-accent">Accountability and Ownership</strong> — We stand by our work, our words, and our results — always delivering what we promise.
           </li>
         </ul>
       </section>
+
+      {/* Contact form at the bottom of the About page */}
+      <ContactForm service="About page" />
     </Layout >
   );
 }

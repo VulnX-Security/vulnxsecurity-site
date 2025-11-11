@@ -1,44 +1,45 @@
 import Brand from "../../components/Brand";
 import Layout from "../../components/Layout";
-import Link from "next/link";
+import ServiceCard from "../../components/ServiceCard";
+import { IconServerNodes, IconWebApi, IconTarget, IconCloudLockAlt, IconProgramShield, IconVulnMagnifierBug } from "../../components/ServiceIcons";
 
 export default function ServicesIndex() {
     const services = [
         {
             title: "Network & Infrastructure Pentesting",
             href: "/services/network-infrastructure",
-            description:
-                "Internal/external testing, firewall validation, AD attack paths and lateral movement.",
+            description: "Internal/external testing, firewall validation, AD attack paths and lateral movement.",
+            icon: <IconServerNodes />
         },
         {
             title: "Web & API Pentesting",
             href: "/services/web-api",
-            description:
-                "OWASP Top 10 and business-logic testing with authenticated coverage and PoC validation.",
+            description: "OWASP Top 10 and business-logic testing with authenticated coverage and PoC validation.",
+            icon: <IconWebApi />
         },
         {
             title: "Red Team & Adversary Simulation",
             href: "/services/red-team",
-            description:
-                "Goal-driven operations (phishing, initial access, C2) with measurable impact metrics.",
+            description: "Goal-driven operations (phishing, initial access, C2) with measurable impact metrics.",
+            icon: <IconTarget />
         },
         {
             title: "Cloud & M365 Security",
             href: "/services/cloud-m365",
-            description:
-                "Azure/M365 identity, configuration, and conditional access posture hardening.",
+            description: "Azure/M365 identity, configuration, and conditional access posture hardening.",
+            icon: <IconCloudLockAlt />
         },
         {
             title: "Security Program Assessment",
             href: "/services/security-program",
-            description:
-                "Policy & control gap analysis aligned to NIST/CIS with prioritized roadmap.",
+            description: "Policy & control gap analysis aligned to NIST/CIS with prioritized roadmap.",
+            icon: <IconProgramShield />
         },
         {
             title: "Vulnerability Management",
             href: "/services/vulnerability-management",
-            description:
-                "Continuous scanning, patch validation, and remediation guidance with executive reporting.",
+            description: "Continuous scanning, patch validation, and remediation guidance with executive reporting.",
+            icon: <IconVulnMagnifierBug />
         },
     ];
 
@@ -50,17 +51,15 @@ export default function ServicesIndex() {
                     Explore detailed descriptions of the services VulnX Security provides.
                 </p>
 
-                <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((s) => (
-                        <Link
+                        <ServiceCard
                             key={s.href}
                             href={s.href}
-                            className="block rounded bg-neutral-900/50 hover:bg-neutral-900/70 transition-colors p-5 h-full"
-                        >
-                            <h3 className="font-medium text-lg">{s.title}</h3>
-                            <p className="mt-2 text-sm text-neutral-300">{s.description}</p>
-                            <span className="mt-4 inline-block text-accent text-sm">Learn more →</span>
-                        </Link>
+                            title={s.title}
+                            description={s.description}
+                            icon={s.icon}
+                        />
                     ))}
                 </div>
             </section>
