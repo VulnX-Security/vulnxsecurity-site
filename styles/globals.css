@@ -38,12 +38,6 @@ p, .prose, .text-body {
   }
   /* Ensure brand inline elements remain centered when used inside flex containers */
   .brand { display: inline-block; }
-
-  /* Add a small extra horizontal gutter on mobile so text isn't too close to the device edge */
-  body {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
 }
 
 /* SVG draw animation for Brand X */
