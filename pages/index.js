@@ -102,8 +102,8 @@ export default function Home() {
           The best defense is a good offense — and that’s where we come in.
         </p>
       </section>
-      {/* Contact form at bottom of home page */}
-      <ContactForm title="Get in touch" intro="Have a question or want to scope an engagement? Send a message and we'll respond promptly." service="Home page" />
+      {/* Contact form at bottom of home page with specific prefill */}
+      <ContactForm title="Get in touch" intro="Have a question or want to scope an engagement? Send a message and we'll respond promptly." service="VulnX's services" />
     </Layout>
   );
 }
