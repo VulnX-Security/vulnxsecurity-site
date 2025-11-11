@@ -10,15 +10,6 @@
   color-scheme: dark;
 }
 
-/* Brand X brush animation variables */
-:root {
-  --brand-cycle: 7000ms; /* full repeat interval */
-  --stroke-length: 125;  /* dash length for path animations */
-  --smear-opacity: 0.28;
-  --stroke-color: #ad0000;
-  --glint-color: rgba(0,0,0,0.9);
-}
-
 html, body {
   height: 100%;
   background-color: #0A0A0A;
@@ -62,14 +53,6 @@ p, .prose, .text-body {
   }
 }
 
-/* reduce heavy glow; wire SVG-draw animation for the X */
-.brand-x {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.25rem;
-  line-height: 0;
-}
-
 /* cycle length — slower, fixed interval */
 :root {
   --brand-cycle: 5200ms;
@@ -80,135 +63,6 @@ p, .prose, .text-body {
   display: inline-block;
   position: relative;
   line-height: 1;
-}
-
-/* wrapper for the X (contains visible text + overlay SVG) */
-.brand-x {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  /* much smaller gap so the X sits close to "Vuln" */
-  margin-left: 0.06rem;
-  /* tiny left shift to snug the X against preceding characters */
-  transform: translateX(-0.06rem);
-  line-height: 1;
-  width: 0.95em;
-  height: 1em;
-  /* ensure overflow doesn't affect layout when strokes animate */
-  overflow: visible;
-}
-
-/* visible X text uses same font as brand so it matches "Vuln" */
-.brand-x-text {
-  font-family: inherit;
-  font-size: 1em;
-  line-height: 1;
-  color: var(--stroke-color);
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1; /* keep text under the stroke while still visible */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* match letterforms more closely */
-  font-weight: inherit;
-  letter-spacing: 0;
-}
-
-/* SVG placed absolutely over the character so strokes draw on top */
-.brand-x-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* smear (soft paint underlay) */
-.brand .brush-smear {
-  stroke: var(--stroke-color);
-  stroke-width: 4.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: var(--stroke-length);
-  stroke-dashoffset: var(--stroke-length);
-  opacity: 0;
-  filter: blur(2px) drop-shadow(0 0 6px rgba(173,0,0,0.06));
-  mix-blend-mode: multiply;
-  animation: smear-draw var(--brand-cycle) ease-in-out infinite both;
-}
-
-/* main brush strokes (thin paint brush look) */
-.brand .brush {
-  stroke: var(--stroke-color);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: var(--stroke-length);
-  stroke-dashoffset: var(--stroke-length);
-  filter: drop-shadow(0 0 1.5px rgba(173,0,0,0.06));
-  animation: stroke-draw var(--brand-cycle) cubic-bezier(.22,.9,.35,1) infinite both;
-}
-
-/* small bright glint traveling across the stroke */
-.brand .glint {
-  stroke: var(--glint-color);
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 6 18;
-  stroke-dashoffset: 24;
-  opacity: 0;
-  filter: blur(0.2px);
-  mix-blend-mode: screen;
-  animation: glint-move var(--brand-cycle) linear infinite both;
-}
-
-/* Animation timings:
-   - smear starts slightly before the main stroke and fades out as it "dries"
-   - first main stroke draws early, second stroke slightly delayed
-   - glint sweeps after strokes have been drawn
-*/
-@keyframes smear-draw {
-  0%   { stroke-dashoffset: var(--stroke-length); opacity: 0; }
-  12%  { opacity: var(--smear-opacity); }
-  45%  { stroke-dashoffset: 0; opacity: calc(var(--smear-opacity) * 0.9); }
-  65%  { opacity: 0.16; }
-  100% { stroke-dashoffset: 0; opacity: 0; }
-}
-@keyframes stroke-draw {
-  0%   { stroke-dashoffset: var(--stroke-length); }
-  40%  { stroke-dashoffset: 0; }   /* stroke drawn by 40% of cycle */
-  100% { stroke-dashoffset: 0; }   /* hold visible */
-}
-@keyframes glint-move {
-  0%   { stroke-dashoffset: 24; opacity: 0; }
-  48%  { opacity: 0; }
-  52%  { opacity: 1; stroke-dashoffset: 0; }
-  70%  { opacity: 0.8; stroke-dashoffset: -24; }
-  100% { opacity: 0; stroke-dashoffset: -48; }
-}
-
-/* sequence delays: second slash drawn after the first */
-.brand .brush:nth-of-type(2) { animation-delay: 600ms; }
-.brand .brush-smear:nth-of-type(2) { animation-delay: 520ms; }
-.brand .glint:nth-of-type(2) { animation-delay: 900ms; }
-
-/* make the animation slower (longer cycle) by increasing --brand-cycle if desired */
-/* reduced motion fallback */
-@media (prefers-reduced-motion: reduce) {
-  .brand .brush,
-  .brand .brush-smear,
-  .brand .glint {
-    animation: none;
-    stroke-dashoffset: 0;
-    opacity: 1;
-    filter: none;
-  }
 }
 
 /* subtle highlight bar under brand (unchanged, low opacity) */
@@ -258,4 +112,6 @@ p, .prose, .text-body {
 @media (prefers-reduced-motion: reduce) {
   .accent-underline::after { animation: none; }
 }
+
+
 

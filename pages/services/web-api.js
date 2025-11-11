@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout";
 import Link from "next/link";
+import ContactForm from "../../components/ContactForm";
 
 export default function WebApi() {
   return (
@@ -23,6 +24,7 @@ export default function WebApi() {
           <Link href="/services" className="text-accent">← Back to services</Link>
         </div>
       </section>
+      <ContactForm service="Web & API Pentesting" className="pt-0" />
     </Layout>
   );
 }
