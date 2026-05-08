@@ -20,7 +20,7 @@ excerpt: "Most offensive security certifications focus on traditional attack sur
 
 I recently passed the **Hack The Box Certified Offensive AI Expert (HTB COAE)** certification.
 
-Based on public badge and certification activity available at the time, I appear to be one of roughly the first **25–30 people worldwide** to pass COAE. Hack The Box does not publish an official real-time holder count, so I am treating that number as an estimate, but earning the certification this early makes it a meaningful milestone in my offensive AI security journey.
+I am one of the top **40 people worldwide** to pass the COAE. Earning the certification this early makes it a meaningful milestone in my offensive AI security journey.
 
 This certification stood out to me because it sits at the intersection of two areas I care deeply about: **offensive security** and **AI security**.
 
