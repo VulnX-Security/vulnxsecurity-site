@@ -166,7 +166,6 @@ p, .prose, .text-body {
 }
 
 .blog-content li {
-  margin-top: 0.6rem;
   color: rgb(212 212 212);
   line-height: 1.05;
 }
