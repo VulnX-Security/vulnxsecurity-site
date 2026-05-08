@@ -30,27 +30,49 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Ryan McCutcheon — <span className="text-accent">Founder & Principal Security Consultant</span></p>
-            <p className="mt-2 leading-relaxed text-sm">
-              Cybersecurity professional, with a Masters degree in Computer and Information Science, specializing in offensive security, adversary emulation, and enterprise defense
-              improvement. Ryan brings a dual-perspective approach to testing and hardening—combining real-world
-              exploitation expertise with defensive engineering insight.
+            <p className="text-lg font-semibold">
+              Ryan McCutcheon — <span className="text-accent">Founder & Principal Security Consultant</span>
             </p>
+
             <p className="mt-2 leading-relaxed text-sm">
-              His experience spans Active Directory, Microsoft 365, web application security, and infrastructure
-              assessments, with a focus on transforming vulnerabilities into measurable resilience. He leads engagements
-              involving penetration testing, red-team operations, and threat simulations aligned with frameworks such as
-              MITRE ATT&CK, NIST, and PTES—delivering executive and technical reporting that drives action.
+              Cybersecurity professional with a Master’s degree in Computer and Information Science, specializing in
+              offensive security, AI red teaming, adversary emulation, and enterprise defense improvement. Ryan brings a
+              dual-perspective approach to testing and hardening systems—combining real-world exploitation expertise with
+              defensive engineering insight.
             </p>
+
+            <p className="mt-2 leading-relaxed text-sm">
+              His experience spans AI/LLM security, web application security, Active Directory, Microsoft 365, cloud
+              environments, and infrastructure assessments, with a focus on transforming vulnerabilities into measurable
+              resilience. He leads engagements involving penetration testing, red-team operations, AI security assessments,
+              and threat simulations aligned with frameworks such as MITRE ATT&CK, NIST, PTES, OWASP, and the Google
+              Secure AI Framework.
+            </p>
+
+            <p className="mt-2 leading-relaxed text-sm">
+              Through VulnX Security, Ryan focuses on delivering practical offensive security services, clear executive and
+              technical reporting, and remediation guidance that helps organizations reduce real-world risk across modern
+              enterprise and AI-enabled environments.
+            </p>
+
             <h3 className="mt-4 font-medium">Certifications</h3>
+
             <ul className="mt-2 list-disc list-inside space-y-2 text-sm leading-relaxed">
               <li>
-                <strong className="text-accent">OffSec OSCP+ (Offensive Security Certified Professional)</strong> – Demonstrates advanced proficiency in
-                real-world penetration testing, exploitation, lateral movement, and post-exploitation reporting.
+                <strong className="text-accent">Hack The Box COAE — Certified Offensive AI Expert</strong> – Demonstrates
+                hands-on expertise in AI red teaming, LLM security, prompt injection, adversarial machine learning, AI
+                application testing, model security, and practical reporting for AI-enabled systems.
               </li>
+
               <li>
-                <strong className="text-accent">CompTIA Security+</strong> – Establishes foundational expertise in network defense, access control, and
-                enterprise security best practices.
+                <strong className="text-accent">OffSec OSCP+ — Offensive Security Certified Professional</strong> – Demonstrates
+                advanced proficiency in real-world penetration testing, exploitation, lateral movement, privilege escalation,
+                and post-exploitation reporting.
+              </li>
+
+              <li>
+                <strong className="text-accent">CompTIA Security+</strong> – Establishes foundational expertise in network
+                defense, access control, risk management, and enterprise security best practices.
               </li>
             </ul>
           </div>
@@ -109,23 +131,33 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Brayden Edwards — <span className="text-accent">Security Consultant</span></p>
+            <p className="text-lg font-semibold">
+              Brayden Edwards — <span className="text-accent">Security Consultant</span>
+            </p>
+
             <p className="mt-2 leading-relaxed text-sm">
-              Defensive security professional specializing in threat detection, incident response, and enterprise defense
-              operations. Brayden focuses on identifying, analyzing, and mitigating real-world attacks through proactive
-              monitoring, log analysis, and vulnerability management.
+              Security consultant focused on penetration testing, vulnerability assessment, and offensive security
+              fundamentals. Brayden specializes in identifying exploitable weaknesses across web applications,
+              enterprise environments, and common infrastructure attack surfaces.
             </p>
+
             <p className="mt-2 text-sm leading-relaxed">
-              He brings experience supporting security operations across Microsoft 365, Active Directory, and endpoint
-              environments—translating complex detections into actionable insights. His work emphasizes strengthening
-              detection engineering, refining response playbooks, and aligning defensive controls with frameworks such as
-              MITRE ATT&CK and NIST CSF.
+              He brings hands-on experience with reconnaissance, vulnerability validation, exploitation methodology,
+              Active Directory fundamentals, Microsoft 365 environments, and technical reporting. His work emphasizes
+              practical testing, clear evidence, and actionable remediation guidance aligned with real-world attacker
+              behavior and frameworks such as MITRE ATT&CK, NIST CSF, and PTES.
             </p>
+
             <h3 className="mt-4 font-medium">Certifications</h3>
             <ul className="mt-2 list-disc list-inside space-y-2 text-sm leading-relaxed">
               <li>
-                <strong className="text-accent">CompTIA Security+</strong> – Validates core expertise in defensive security, threat management, and
-                enterprise risk mitigation.
+                <strong className="text-accent">INE Junior Penetration Tester</strong> – Demonstrates practical knowledge of
+                penetration testing fundamentals, vulnerability identification, exploitation methodology, web application
+                testing, and reporting.
+              </li>
+              <li>
+                <strong className="text-accent">CompTIA Security+</strong> – Validates core knowledge in security principles,
+                network defense, risk management, access control, and enterprise security best practices.
               </li>
             </ul>
           </div>
