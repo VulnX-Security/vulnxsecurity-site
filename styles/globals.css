@@ -97,6 +97,128 @@ p, .prose, .text-body {
   animation: accent-underline-drift 5.5s ease-in-out infinite;
 }
 
+/* Blog content styling */
+.blog-content {
+  max-width: 760px;
+  color: rgb(212 212 212);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.blog-content * {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.blog-content h1 {
+  display: none;
+}
+
+.blog-content h2 {
+  margin-top: 3.75rem;
+  margin-bottom: 1rem;
+  color: #ad0000;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.blog-content h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #ad0000;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.blog-content p {
+  margin-top: 1.15rem;
+  margin-bottom: 1.15rem;
+  color: rgb(212 212 212);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.blog-content strong {
+  color: #ad0000;
+  font-weight: 700;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-top: 1.25rem;
+  margin-bottom: 1.75rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-top: 0.6rem;
+  color: rgb(212 212 212);
+  line-height: 1.05;
+}
+
+.blog-content blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid rgb(239 68 68);
+  background: rgba(23, 23, 23, 0.7);
+  padding: 1rem 1.25rem;
+  color: rgb(245 245 245);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.blog-content blockquote p {
+  margin: 0;
+}
+
+.blog-content hr {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  border: 0;
+  border-top: 1px solid rgb(38 38 38);
+}
+
+.blog-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(38 38 38);
+  border-radius: 1rem;
+  background: rgb(10 10 10);
+}
+
+.blog-content figure {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.blog-content figure img {
+  margin-bottom: 0.75rem;
+}
+
+.blog-content figcaption {
+  color: rgb(115 115 115);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 @keyframes accent-underline-drift {
   0% { background-position: 0% 0; }
   50% { background-position: 30% 0; }
