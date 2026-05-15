@@ -31,7 +31,7 @@ export default function About() {
           </div>
           <div className="text-neutral-300 text-center md:text-left">
             <p className="text-lg font-semibold">
-              Ryan McCutcheon — <span className="text-accent">Founder & Principal Security Consultant</span>
+              Ryan McCutcheon — <span className="text-accent">Founder & Principal Offensive Security Consultant</span>
             </p>
 
             <p className="mt-2 leading-relaxed text-sm">
@@ -91,7 +91,7 @@ export default function About() {
             />
           </div>
           <div className="text-neutral-300 text-center md:text-left">
-            <p className="text-lg font-semibold">Devin Ogle — <span className="text-accent">Principal Security Consultant</span></p>
+            <p className="text-lg font-semibold">Devin Ogle — <span className="text-accent">Senior Offensive Security Consultant</span></p>
             <p className="mt-2 leading-relaxed text-sm">
               Brings hands-on experience from both public-sector and private-industry environments, delivering practical,
               actionable security insight across varied threat landscapes. Devin’s work focuses on vulnerability assessment,
@@ -132,7 +132,7 @@ export default function About() {
           </div>
           <div className="text-neutral-300 text-center md:text-left">
             <p className="text-lg font-semibold">
-              Brayden Edwards — <span className="text-accent">Security Consultant</span>
+              Brayden Edwards — <span className="text-accent">Offensive Security Consultant</span>
             </p>
 
             <p className="mt-2 leading-relaxed text-sm">
