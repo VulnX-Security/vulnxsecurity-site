@@ -21,7 +21,7 @@ export default function About() {
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
               src="/headshot-1.jpg"
-              alt="Ryan McCutcheon — Founder & Principal Security Consultant"
+              alt="Ryan McCutcheon — Founder & Principal Offensive Security Consultant"
               width={170}
               height={170}
               className="rounded-lg object-cover shadow-lg shadow-black/40"
@@ -83,7 +83,7 @@ export default function About() {
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
               src="/headshot-3.png"
-              alt="Devin Ogle — Principal Security Consultant"
+              alt="Devin Ogle — Senior Offensive Security Consultant"
               width={170}
               height={170}
               className="rounded-lg object-cover shadow-lg shadow-black/40"
@@ -123,7 +123,7 @@ export default function About() {
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
               src="/headshot-2.jpg"
-              alt="Brayden Edwards — Security Consultant"
+              alt="Brayden Edwards — Offensive Security Consultant"
               width={170}
               height={170}
               className="rounded-lg object-cover shadow-lg shadow-black/40"
