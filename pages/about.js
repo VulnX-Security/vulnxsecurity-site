@@ -20,7 +20,7 @@ export default function About() {
         <div className="mt-6 flex flex-col md:flex-row md:items-center gap-6">
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <Image
-              src="/headshot-1.jpg"
+              src="/headshot-1.PNG"
               alt="Ryan McCutcheon — Founder & Principal Offensive Security Consultant"
               width={170}
               height={170}
